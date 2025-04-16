@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct dashBoardUi: View {
+    @State var selectedMood: Mood
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            Tab("Dashboard", systemImage:"person.crop.circle.fill")
+            {
+                VStack()
+                {
+                    Text("today's mood")
+                    Text("\(selectedMood.emoji)")
+                    Text("\(selectedMood.message)")
+                    NavigationLink(){}
+                }
+            }
+            Tab("About", systemImage:"info.circle")
+            {
+                AboutView()
+            }
+        }
     }
 }
 
 #Preview {
-    dashBoardUi()
+    
 }
