@@ -11,7 +11,7 @@ struct dashBoardUi: View {
     @State var selectedMood: Mood
     var body: some View {
         TabView {
-            Tab("Dashboard", systemImage:"person.crop.circle.fill")
+            Tab("Dashboard", systemImage:"face.smiling")
             {
                 NavigationStack{
                     VStack()
