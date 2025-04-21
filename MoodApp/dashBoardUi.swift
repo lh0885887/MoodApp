@@ -17,13 +17,18 @@ struct dashBoardUi: View {
                 {
                     Text("today's mood")
                     Text("\(selectedMood.emoji)")
-                    Text("\(selectedMood.message)")
-                    NavigationLink(){}
+                    Text("\(selectedMood.mood_description)")
+                    NavigationLink("Pick your mood: ")
+                    {
+                        MoodPicker()
+                    }
                 }
             }
             Tab("About", systemImage:"info.circle")
             {
-                AboutView()
+                NavigationStack(
+                    AboutView()
+                )
             }
         }
     }
