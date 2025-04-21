@@ -42,7 +42,8 @@ struct AboutView: View {
                         }
                         
                     }
-                    Divider().frame(width: 1,height : 100)
+                    Divider().frame(width: 3,height : 110)
+                        .background(Color(red: 0.827, green: 0.922, blue: 0.486))
                     VStack(alignment: .leading, spacing: 10){
                         Text("About/Styling Lead")
                         Text("Mood Picker Lead")
