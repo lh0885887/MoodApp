@@ -13,14 +13,16 @@ struct dashBoardUi: View {
         TabView {
             Tab("Dashboard", systemImage:"person.crop.circle.fill")
             {
-                VStack()
-                {
-                    Text("today's mood")
-                    Text("\(selectedMood.emoji)")
-                    Text("\(selectedMood.mood_description)")
-                    NavigationLink("Pick your mood: ")
+                NavigationStack{
+                    VStack()
                     {
-                        MoodPicker()
+                        Text("today's mood")
+                        Text("\(selectedMood.emoji)")
+                        Text("\(selectedMood.mood_description)")
+                        NavigationLink("Pick your mood: ")
+                        {
+                            MoodPicker()
+                        }
                     }
                 }
             }
