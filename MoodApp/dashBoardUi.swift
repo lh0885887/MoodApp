@@ -16,26 +16,30 @@ struct dashBoardUi: View {
                 NavigationStack{
                     VStack()
                     {
-                        Text("today's mood")
+                        Text("Today's Mood:").font(.title).bold(true)
+                            .padding(20)
                         Text("\(selectedMood.emoji)")
+                            .font(.system(size: 100))
+                            .padding(20)
                         Text("\(selectedMood.mood_description)")
-                        NavigationLink("Pick your mood: ")
+                            .padding(20)
+                        
+                        NavigationLink("--> Pick Your Mood <--")
                         {
-                            MoodPicker()
+                            MoodPicker(currentlySelectedMood: $selectedMood)
                         }
                     }
                 }
             }
             Tab("About", systemImage:"info.circle")
             {
-                NavigationStack(
+                NavigationStack {
                     AboutView()
-                )
+                }
             }
         }
     }
 }
-
 #Preview {
-    
+    dashBoardUi(selectedMood: .happy)
 }

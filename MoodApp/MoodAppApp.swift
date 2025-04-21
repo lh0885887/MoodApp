@@ -11,7 +11,11 @@ import SwiftUI
 struct MoodAppApp: App {
     var body: some Scene {
         WindowGroup {
-            dashBoardUi()
+            dashBoardUi(selectedMood: .happy)
         }
     }
+}
+
+#Preview {
+    dashBoardUi(selectedMood: .happy)
 }

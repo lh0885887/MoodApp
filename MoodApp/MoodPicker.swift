@@ -49,7 +49,7 @@ struct MoodPickerElement: View {
                 .font(.system(size: 24).bold())
         }.padding(16)
             .frame(minWidth: preferredWidth)
-            .background(Color.cyan.opacity(0.5))
+            .background(Color(red: 0.827, green: 0.922, blue: 0.486))
             .cornerRadius(24)
     }
 }
